@@ -1,0 +1,18 @@
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+  -moz-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+@mixin dis($d) {
+  display: $d;
+}
+
+@mixin pos($offset, $top, $right, $bottom, $left) {
+  position: $offset;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
