@@ -1,7 +1,7 @@
 Touch Slider Responsive Javascript/css3 Slider
 --------------------------------------
 
-[Live Demo](http://www.pirolab.it/touch-slider/)
+[Live Demo](https://pirolab.github.io/)
 
 
 --------------------------------------
@@ -9,7 +9,7 @@ Touch Slider Responsive Javascript/css3 Slider
 
 ```sh
 # Download from GitHub
-https://github.com/pirolab/touch-slider/archive/master.zip
+https://github.com/pirolab/pirolab.github.io/archive/master.zip
 
 
 --------------------------------------
