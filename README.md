@@ -7,16 +7,16 @@
 
 ### Example
 ```html
-<div class='o-sliderContainer hasShadow' id="yourId">
-  <div class='o-slider' id='pbSlider'>
-    <div class="o-slider--item" style='background-image: url(images/5.jpg)'></div>
-    <div class="o-slider--item" style='background-image: url(images/6.jpg)'></div>
-    <div class="o-slider--item" style='background-image: url(images/1.jpg)'></div>
-    <div class="o-slider--item" style='background-image: url(images/2.jpg)'></div>
-    <div class="o-slider--item" style='background-image: url(images/3.jpg)'></div>
-    <div class="o-slider--item" style='background-image: url(images/4.jpg)'></div>
+  <div class='o-sliderContainer hasShadow' id="yourId">
+    <div class='o-slider' id='pbSlider'>
+      <div class="o-slider--item" data-image="images/5.jpg"></div>
+      <div class="o-slider--item" data-image="images/6.jpg"></div>
+      <div class="o-slider--item" data-image="images/1.jpg"></div>
+      <div class="o-slider--item" data-image="images/2.jpg"></div>
+      <div class="o-slider--item" data-image="images/3.jpg"></div>
+      <div class="o-slider--item" data-image="images/4.jpg"></div>
+    </div>
   </div>
-</div>
 
 
 <script>
