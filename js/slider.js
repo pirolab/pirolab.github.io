@@ -83,17 +83,16 @@
             'transition: all ' + slider_Opts.slider_Speed + 'ms ' + slider_Opts.slider_Ease + ';' +
             '</style>'
         );
-        function setImages(target){
-          $(target).each(function(){
-            var bg = $(this).attr('data-image');
-            //console.log(bg)
-            $(this).css({'background-image':'url('+bg+')'});
-          });
-        }
-        setImages(pbSlider.slider_Item);
+
+
+
         /*:::::::: ONlOAD STUFF ::::::::*/
         $(window).on('load', function() {
-            setTimeout ( function(){
+          $(pbSlider.slider_Item).each(function(){
+            var bg = $(this).attr('data-image');
+            $(this).css({'background-image':'url('+bg+')'});
+          });
+          setTimeout ( function(){
               loader(false);
             },1000);
             $(pbSlider.slider_Wrap + ' .o-slider-controls').addClass('isVisible');
