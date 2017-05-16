@@ -61,6 +61,8 @@
         }
         $(window).resize(function() {setResponsive();});
 
+
+
         /*:::::::: OBJECT SLIDER ::::::::*/
         var pbSlider = {};
         pbSlider.slider_Wrap = slider_Opts.slider_Wrap;
@@ -73,6 +75,7 @@
         pbSlider.slider_NavPagination ='<ul class="o-slider-pagination"></ul>';
         pbSlider.slider_NavArrows ='<ul class="o-slider-arrows"><li class="o-slider-prev"><i class="icon-left-open-big"></i></li><li class="o-slider-next"><i class="icon-right-open-big"></i></li></ul>';
 
+
         /*:::::::: APPEND ANIMATION ::::::::*/
         $('head').append(
             '<style>' + pbSlider.slider_Wrap + ' .o-slider.isAnimate{' +
@@ -80,7 +83,14 @@
             'transition: all ' + slider_Opts.slider_Speed + 'ms ' + slider_Opts.slider_Ease + ';' +
             '</style>'
         );
-
+        function setImages(target){
+          $(target).each(function(){
+            var bg = $(this).attr('data-image');
+            //console.log(bg)
+            $(this).css({'background-image':'url('+bg+')'});
+          });
+        }
+        setImages(pbSlider.slider_Item);
         /*:::::::: ONlOAD STUFF ::::::::*/
         $(window).on('load', function() {
             setTimeout ( function(){
@@ -96,7 +106,7 @@
             pbSlider.slider_Draggable = selector;
             pbSlider.slider_Count = $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).length;
             $(selector).css('width', pbSlider.slider_Count * 100 + '%');
-            $(pbSlider.slider_Item).css('width', 100 / pbSlider.slider_Count+ '%');
+            $(pbSlider.slider_Item).css({'width': 100 / pbSlider.slider_Count+ '%'});
 
             var incrSlides = 0;
             $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).each(function() {
@@ -115,8 +125,8 @@
               for (incrPagination; incrPagination < pbSlider.slider_Count; incrPagination++) {
                   var activeStatus = incrPagination === pbSlider.slider_Active ? ' class="isActive"' : '';
                   var gotoSlide = 'data-increase="' + [incrPagination] + '"';
-                  var background = $("[data-id='slide-" + incrPagination + "']").css('background-image');
-                  background = background.replace('url(','').replace(')','').replace(/\"/gi, "");
+                  var background = $(pbSlider.slider_Wrap).find("[data-id='slide-" + incrPagination + "']").attr('data-image');
+                  //background = background.replace('url(','').replace(')','').replace(/\"/gi, "");
                   console.log(background);
                   $(pbSlider.slider_Wrap).find(pbSlider.slider_Dots.class).append(
                     '<li ' + activeStatus + ' ' + gotoSlide + '>'+
