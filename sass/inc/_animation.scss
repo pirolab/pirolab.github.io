@@ -1,0 +1,22 @@
+@-webkit-keyframes ball-scale-multiple {
+  0% {
+    transform: scale(0) rotate(-90deg);
+    opacity: 0;
+  } 5% {
+    opacity: 1;
+  } 100% {
+    transform: scale(1.2) rotate(90deg);
+    opacity: 0;
+  }
+}
+@keyframes ball-scale-multiple {
+  0% {
+    transform: scale(0) rotate(-90deg);
+    opacity: 0;
+  } 5% {
+    opacity: 1;
+  } 100% {
+    transform: scale(1.2) rotate(90deg);
+    opacity: 0;
+  }
+}

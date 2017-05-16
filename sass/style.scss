@@ -1,11 +1,8 @@
-@import 'variables';
-@import 'mixin';
-
-@import 'base';
-
-@import 'animation';
-@import 'loader';
-
+@import 'inc/_variables';
+@import 'inc/_mixin';
+@import 'inc/_base';
+@import 'inc/_animation';
+@import 'inc/_loader';
 
 .a-container {
   width: 1170px;
@@ -17,8 +14,6 @@
   display: inline-block;
   margin: 0 1%;
 }
-
-
 .o-sliderContainer {
   overflow: hidden;
   position: relative;
@@ -28,22 +23,18 @@
   float: left;
   margin: 30px 0;
   height: auto;
-
   &.hasShadow {
     box-shadow: 0 39px 22px -29px $black_20;
   }
-
   &:hover {
     .o-slider-next {
       right: 0;
     }
-
     .o-slider-prev {
       left: 0;
     }
   }
 }
-
 .o-slider--item {
   height: auto;
   width: 0;
@@ -57,12 +48,10 @@
   transform: scale(0.95, 0.95);
   transform-origin: center center;
   z-index: 99;
-
   &.isActive {
     opacity: 1;
     transform: scale(1, 1);
   }
-
   &.isMoving {
     opacity: 0.6;
     transform: scale(0.95, 0.95);
