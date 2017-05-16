@@ -7,7 +7,7 @@
 
 ### Example
 ```html
-<div class='o-sliderContainer hasShadow' id="pbSliderWrap">
+<div class='o-sliderContainer hasShadow' id="yourId">
   <div class='o-slider' id='pbSlider'>
     <div class="o-slider--item" style='background-image: url(images/5.jpg)'></div>
     <div class="o-slider--item" style='background-image: url(images/6.jpg)'></div>
