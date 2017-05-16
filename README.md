@@ -21,7 +21,7 @@
 
 <script>
 $('#pbSlider0').pbTouchSlider({
-    slider_Wrap : '', // Assign a unique ID to the div.o-sliderContainer
+    slider_Wrap : '#yourId', // Assign a unique ID to the div.o-sliderContainer
     slider_Item : '.o-slider--item', // Single Item
     slider_Drag : true, // Your choise.. to dragIt or not to dragIt..this is the question...
     slider_Dots : { // Wanna see dots or not?
