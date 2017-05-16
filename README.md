@@ -1,18 +1,10 @@
-Touch Slider Responsive Javascript/css3 Slider
---------------------------------------
+# Touch Slider Responsive Javascript/css3 Slider
 
 [Live Demo](https://pirolab.github.io/)
 
-
---------------------------------------
-#### Download Package
-
-```sh
-# Download from GitHub
-https://github.com/pirolab/pirolab.github.io/archive/master.zip
+[Download from GitHub](https://github.com/pirolab/pirolab.github.io/archive/master.zip)
 
 
---------------------------------------
 #### Example
 ```html
 <div class='o-sliderContainer hasShadow' id="pbSliderWrap">
@@ -56,6 +48,4 @@ $('#pbSlider0').pbTouchSlider({
   }
 });
 </script>
-
-
 ```
