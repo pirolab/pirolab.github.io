@@ -5,7 +5,7 @@
 ### [Download from GitHub](https://github.com/pirolab/pirolab.github.io/archive/master.zip)
 
 
-### Example
+### HTML
 ```html
   <div class='o-sliderContainer hasShadow' id="yourId">
     <div class='o-slider' id='pbSlider'>
@@ -89,8 +89,10 @@
       </div>
     </div>
   </div>
+```
+### JAVASCRIPT
 
-
+```html
 <script>
 $('#pbSlider0').pbTouchSlider({
     slider_Wrap : '#yourId', // Assign a unique ID to the div.o-sliderContainer
