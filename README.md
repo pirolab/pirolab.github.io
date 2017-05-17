@@ -15,7 +15,11 @@
           <span class="a-divider"></span>
           <h2 class="o-slider-subTitle">This is a sub title</h2>
           <span class="a-divider"></span>
-          <p class="o-slider-paragraph">This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph </p>
+          <p class="o-slider-paragraph">
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph </p>
         </div>        
       </div>
       <div class="o-slider--item" data-image="images/6.jpg">
@@ -24,7 +28,11 @@
           <span class="a-divider"></span>
           <h2 class="o-slider-subTitle">This is a sub title</h2>
           <span class="a-divider"></span>
-          <p class="o-slider-paragraph">This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph </p>
+          <p class="o-slider-paragraph">
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph </p>
         </div>
       </div>
       <div class="o-slider--item" data-image="images/1.jpg">
@@ -33,7 +41,11 @@
           <span class="a-divider"></span>
           <h2 class="o-slider-subTitle">This is a sub title</h2>
           <span class="a-divider"></span>
-          <p class="o-slider-paragraph">This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph </p>
+          <p class="o-slider-paragraph">
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph </p>
         </div>
       </div>
       <div class="o-slider--item" data-image="images/2.jpg">
@@ -42,7 +54,11 @@
           <span class="a-divider"></span>
           <h2 class="o-slider-subTitle">This is a sub title</h2>
           <span class="a-divider"></span>
-          <p class="o-slider-paragraph">This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph </p>
+          <p class="o-slider-paragraph">
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph </p>
         </div>
       </div>
       <div class="o-slider--item" data-image="images/3.jpg">
@@ -51,7 +67,11 @@
           <span class="a-divider"></span>
           <h2 class="o-slider-subTitle">This is a sub title</h2>
           <span class="a-divider"></span>
-          <p class="o-slider-paragraph">This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph </p>
+          <p class="o-slider-paragraph">
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph </p>
         </div>
       </div>
       <div class="o-slider--item" data-image="images/4.jpg">
@@ -60,7 +80,11 @@
           <span class="a-divider"></span>
           <h2 class="o-slider-subTitle">This is a sub title</h2>
           <span class="a-divider"></span>
-          <p class="o-slider-paragraph">This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph This is a sub paragraph </p>
+          <p class="o-slider-paragraph">
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph This is a sub paragraph 
+          This is a sub paragraph </p>
         </div>
       </div>
     </div>
