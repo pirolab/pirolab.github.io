@@ -7,7 +7,6 @@
 
 ### Example
 ```html
-  <!-- standard marckup for slider -->
   <div class='o-sliderContainer hasShadow' id="yourId">
     <div class='o-slider' id='pbSlider'>
       <div class="o-slider--item" data-image="images/5.jpg">
