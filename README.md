@@ -7,7 +7,7 @@
 
 ### Example
 ```html
-  <div class='o-sliderContainer hasShadow' id="**yourId**">
+  <div class='o-sliderContainer hasShadow' id="yourId">
     <div class='o-slider' id='pbSlider'>
       <div class="o-slider--item" data-image="images/5.jpg">
         <div class="o-slider-textWrap">
@@ -69,7 +69,7 @@
 
 <script>
 $('#pbSlider0').pbTouchSlider({
-    slider_Wrap : '**#yourId**', // Assign a unique ID to the div.o-sliderContainer
+    slider_Wrap : '#yourId', // Assign a unique ID to the div.o-sliderContainer
     slider_Item : '.o-slider--item', // Single Item
     slider_Drag : true, // Your choise.. to dragIt or not to dragIt..this is the question...
     slider_Dots : { // Wanna see dots or not?
