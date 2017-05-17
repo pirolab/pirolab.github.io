@@ -125,3 +125,11 @@ $('#pbSlider0').pbTouchSlider({
 });
 </script>
 ```
+
+
+## Special Thanks
+* [Hammer.js](http://hammerjs.github.io/) / Single and multi-touch gestures library 
+* [Lea Verou](http://cubic-bezier.com/)  / Easing functions for CSS3
+* [Daniel Bruce](http://www.entypo.com/) / Font Icons
+* [jQuery](https://jquery.com/) / JS framework
+
