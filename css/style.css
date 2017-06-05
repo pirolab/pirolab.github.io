@@ -500,7 +500,7 @@ h1 {
   cursor: pointer;
   text-align: center;
   padding: 10px 25px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(0, 0, 0, 0.4);
   display: inline-block;
   vertical-align: middle;
   line-height: 100%;
@@ -516,7 +516,7 @@ h1 {
   text-align: center;
   width: 100%;
   font-size: 1.8rem;
-  color: #000;
+  color: #fff;
 }
 
 /* line 432, ../sass/style.scss */
