@@ -355,16 +355,14 @@
   background-position: center center;
   transition: all 250ms;
   z-index: -1;
-  outline: 3px solid $black;
+  border: 3px solid $black;
   transform: scale(0.2, 0.2);
   transform-origin: center bottom;
   display: none;
 
   &::before {
     content: "";
-
     @include pos(absolute, auto, auto, -13px, 50%);
-
     margin: 0 0 0 -5px;
     height: 0;
     width: 0;
