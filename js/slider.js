@@ -204,7 +204,6 @@
                 pbSlider.slider_Active = pbSlider.slider_Count - 1;
             } else {
                 pbSlider.slider_Active = number;
-                loader(true);
             }
 
             if (pbSlider.slider_Active >= pbSlider.slider_Count - 1) {
@@ -232,7 +231,6 @@
                 $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).removeClass('isActive').removeClass('isMoving');
                 $(pbSlider.slider_Wrap).find(pbSlider.slider_Item + '[data-id=slide-' + pbSlider.slider_Active + ']').addClass('isActive');
                 $(pbSlider.slider_Wrap + ' .o-slider--item img').css('transform', 'translateX(0px )');
-                loader(false);
             }, slider_Opts.slider_Speed);
             if(slider_Opts.slider_Dots.enabled === true){
               var sliderDots = $(pbSlider.slider_Wrap).find(pbSlider.slider_Dots.class + ' > *');
