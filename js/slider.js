@@ -7,7 +7,8 @@
             slider_Drag : true, // Your choise.. to dragIt or not to dragIt..this is the question...
             slider_Dots : { // Wanna see dots or not?
               class :'.o-slider-pagination',
-              enabled : true
+              enabled : true,
+              preview : true
             },
             slider_Arrows : { // Wanna see Arrows or not?
               class :'.o-slider-arrows',
@@ -126,11 +127,16 @@
                   var gotoSlide = 'data-increase="' + [incrPagination] + '"';
                   var background = $(pbSlider.slider_Wrap).find("[data-id='slide-" + incrPagination + "']").attr('data-image');
                   //background = background.replace('url(','').replace(')','').replace(/\"/gi, "");
-                  console.log(background);
-                  $(pbSlider.slider_Wrap).find(pbSlider.slider_Dots.class).append(
-                    '<li ' + activeStatus + ' ' + gotoSlide + '>'+
-                      '<span class="o-slider--preview" style="background-image:url('+background+')"></span>'+
-                    '</li>');
+                  if(slider_Opts.slider_Dots.preview === true){
+                    $(pbSlider.slider_Wrap).find(pbSlider.slider_Dots.class)
+                    .append(
+                      '<li ' + activeStatus + ' ' + gotoSlide + '>'+
+                        '<span class="o-slider--preview" style="background-image:url('+background+')"></span>'+
+                      '</li>');
+                  } else {
+                    $(pbSlider.slider_Wrap).find(pbSlider.slider_Dots.class)
+                    .append('<li ' + activeStatus + ' ' + gotoSlide + '></li>');
+                  }
               }
             }
             setTimeout(function() {

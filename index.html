@@ -80,7 +80,8 @@
     },
     slider_Dots: {
       class :'.o-slider-pagination',
-      enabled : true
+      enabled : true,
+      preview : false
     },
     slider_Breakpoints: {
         default: {
@@ -291,7 +292,6 @@
 <script src='js/hammer.min.js'></script>
 <script src='js/slider.js'></script>
 <script>
-  console.log(pbSlider.slider_Wrap);
 $('#pbSlider0').pbTouchSlider({
   slider_Wrap: '#pbSliderWrap0',
   slider_Threshold: 10,
@@ -303,7 +303,8 @@ $('#pbSlider0').pbTouchSlider({
   },
   slider_Dots: {
     class :'.o-slider-pagination',
-    enabled : true
+    enabled : true,
+    preview : false
   },
   slider_Breakpoints: {
       default: {
