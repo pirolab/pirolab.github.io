@@ -184,7 +184,6 @@
               });
             }
             $(pbSlider.slider_Wrap + ' .o-slider-pagination li').on('click', function() {
-
                 var this_data = $(this).attr('data-increase');
                 if(!$(this).hasClass('isActive')){
                   pbSlider.pbGoslide(this_data);

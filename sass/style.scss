@@ -46,7 +46,7 @@
   float: left;
   transition: all 0.2s cubic-bezier(0.7, 0.18, 0.53, 0.75);
   opacity: 0.6;
-  transform: scale(0.95, 0.95);
+  transform: scale(1,1);
   transform-origin: center center;
   z-index: 99;
   &::after{
@@ -68,8 +68,9 @@
   }
   &.isMoving {
     opacity: 0.6;
-    transform: scale(0.95, 0.95);
+    transform: scale(1, 1);
     z-index: 100;
+
   }
 }
 
@@ -407,7 +408,7 @@
   cursor: pointer;
   text-align: center;
   padding: 10px 25px;
-  background: $black_40;
+  //background: $black_40;
   display: inline-block;
   vertical-align: middle;
   line-height: 100%;
@@ -420,7 +421,8 @@
     margin: (-12px) 0 0;
     text-align: center;
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 4.2rem;
+    line-height: 1;
     color: $white;
   }
 }
