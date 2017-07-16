@@ -324,7 +324,7 @@
 
   > li {
     border-radius: 50%;
-    box-shadow: 0 0 0 2px $white_90, 0 0 2px 0 $black_40 inset;
+    box-shadow: 0 0 0 2px $white_40, 0 0 2px 0 $black_40 inset;
     display: inline-block;
 
     @include pos(relative, 0, 0, 0, 0);
@@ -338,7 +338,8 @@
     background-clip: padding-box;
     z-index: 100;
 
-    &.isActive {
+    &.isActive,
+    &:hover {
       background-color: $white_90;
       transform: scale(1.3, 1.3);
     }
@@ -418,10 +419,12 @@
     position: absolute;
     top: 50%;
     left: 0;
-    margin: (-12px) 0 0;
+    margin: 0;
+    transform: translate(0 , -50%);
     text-align: center;
     width: 100%;
-    font-size: 4.2rem;
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
     line-height: 1;
     color: $white;
   }
