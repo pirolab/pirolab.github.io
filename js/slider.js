@@ -4,6 +4,7 @@
         var slider_Opts = $.extend({
             slider_Wrap : '', // Assign a unique ID to the div.o-sliderContainer
             slider_Item : '.o-slider--item', // Single Item
+            slider_Item_Width : 90, // Single Item width in  percentage %
             slider_Drag : true, // Your choise.. to dragIt or not to dragIt..this is the question...
             slider_Dots : { // Wanna see dots or not?
               class :'.o-slider-pagination',
@@ -39,6 +40,7 @@
                           '<div></div>'+
                           '<div></div>'+
                           '<div></div>'+
+                          '<div></div>'+
                           '</div></div>';
         $(slider_Opts.slider_Wrap).each( function(){$(this).append(loaderHtml);});
         function loader(visibility) {
@@ -70,6 +72,7 @@
         pbSlider.slider_Item = slider_Opts.slider_Item;
         pbSlider.slider_Dots = slider_Opts.slider_Dots;
         pbSlider.slider_Threshold = slider_Opts.slider_Threshold;
+        pbSlider.slider_Item_Width = slider_Opts.slider_Item_Width
         pbSlider.slider_Active = 0;
         pbSlider.slider_Count = 0;
         pbSlider.slider_NavWrap = '<div class="o-slider-controls"></div>';
@@ -105,8 +108,11 @@
         pbSlider.pbInit = function(selector) {
             pbSlider.slider_Draggable = selector;
             pbSlider.slider_Count = $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).length;
-            $(selector).css('width', pbSlider.slider_Count * 100 + '%');
-            $(pbSlider.slider_Item).css({'width': 100 / pbSlider.slider_Count+ '%'});
+            pbSlider.sliderWidth = pbSlider.slider_Count * 100;
+            pbSlider.sliderItemWidth = pbSlider.slider_Item_Width / pbSlider.slider_Count;
+            pbSlider.sliderMargin = (100 - pbSlider.slider_Item_Width) / pbSlider.slider_Count / 2;
+            $(selector).css('width',  pbSlider.sliderWidth + '%');
+            $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).css({'width': pbSlider.sliderItemWidth + '%','margin-left': pbSlider.sliderMargin+'%','margin-right': pbSlider.sliderMargin+'%'});
 
             var incrSlides = 0;
             $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).each(function() {
@@ -210,7 +216,7 @@
             } else {
                 pbSlider.slider_Active = number;
             }
-
+            loader(true);
             if (pbSlider.slider_Active >= pbSlider.slider_Count - 1) {
               var firstS = $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).first();
                 $(pbSlider.slider_Wrap + ' .o-slider-next').addClass('isDisabled');
@@ -236,6 +242,7 @@
                 $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).removeClass('isActive').removeClass('isMoving');
                 $(pbSlider.slider_Wrap).find(pbSlider.slider_Item + '[data-id=slide-' + pbSlider.slider_Active + ']').addClass('isActive');
                 $(pbSlider.slider_Wrap + ' .o-slider--item img').css('transform', 'translateX(0px )');
+                loader(false);
             }, slider_Opts.slider_Speed);
             if(slider_Opts.slider_Dots.enabled === true){
               var sliderDots = $(pbSlider.slider_Wrap).find(pbSlider.slider_Dots.class + ' > *');
@@ -247,6 +254,7 @@
              }
              setTimeout(function() {
                $(pbSlider.slider_Wrap).find(sliderDots).children().removeClass('isActive');
+
              },500);
             }
             pbSlider.slider_Active = Number(pbSlider.slider_Active);
