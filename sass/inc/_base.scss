@@ -7,11 +7,8 @@ body {
 }
 * {box-sizing: border-box;}
 a {
-  color: $white;
-  font-size: 14px;
-  letter-spacing: 0.125em;
-  text-decoration: none;
-  text-transform: uppercase;
+  color: $black;
+  outline: none;
 }
 h1 {
   text-transform: uppercase;
