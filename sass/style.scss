@@ -22,7 +22,6 @@
   float: left;
   margin: 30px 0;
   height: auto;
-
   &.hasShadow {
     box-shadow: 0 39px 22px -29px $black_20;
   }
@@ -112,82 +111,24 @@
 
   .o-slider-paragraph {
     opacity: 1;
-    transform: perspective(0) rotateY(0) translate(0, 0);
-    transform-origin: 0 0;
     transition-delay: 1s;
   }
 
   .o-slider-title {
     opacity: 1;
-    transform: perspective(0) rotateY(0) translate(0, 0);
-    transform-origin: 0 0;
     transition-delay: 0.2s;
   }
 
   .o-slider-subTitle {
     opacity: 1;
-    transform: perspective(0) rotateY(0) translate(0, 0);
-    transform-origin: 0 0;
     transition-delay: 0.6s;
   }
-
-  // .o-slider-title::after {
-  //   width: 100%;
-  //   opacity: 1;
-  //   transform: skew(5deg, 1deg) translate(-15px, 0);
-  //   transition-delay: 0.4s;
-  // }
-  //
-  // .o-slider-subTitle::after {
-  //   width: 100%;
-  //   opacity: 1;
-  //   transform: skew(-5deg, -1deg) translate(-5px, 0);
-  //   transition-delay: 0.8s;
-  // }
-  //
-  // .o-slider-paragraph::after {
-  //   width: 100%;
-  //   opacity: 1;
-  //   transform: skew(5deg, 1deg) translate(-10px, 4px);
-  //   transition-delay: 1.2s;
-  // }
 }
+//transform: perspective(1000px) rotateX( -180deg );
 
-.o-slider-title {
-  width: auto;
-  margin: 0 0 5px 0;
-  height: auto;
-  color: $white;
-  text-shadow: 2px 2px 2px $black_20;
-  font-size: 1.4rem;
-  display: inline-block;
-  padding:0;
-  transition: all 0.4s;
-  transform-origin: 0 0;
-  transform: perspective(1000px) rotateY(120deg) translate(100px, -100px);
-  opacity: 0;
-  position: relative;
-  z-index: 1;
-}
 
-.o-slider-subTitle {
-  width: auto;
-  margin: 0 0 5px 0;
-  height: auto;
-  color: $white;
-  text-shadow: 2px 2px 2px $black_20;
-  font-size: 1.4rem;
-  display: inline-block;
-  padding:0;
-  transition: all 0.4s;
-  transform-origin: 0 0;
-  transform: perspective(1000px) rotateY(120deg) translate(100px, -100px);
-  opacity: 0;
-  position: relative;
-  z-index: 1;
-  font-size: 1.2rem;
-}
-
+.o-slider-title,
+.o-slider-subTitle,
 .o-slider-paragraph {
   width: auto;
   margin: 0 0 5px 0;
@@ -199,13 +140,18 @@
   padding:0;
   transition: all 0.4s;
   transform-origin: 0 0;
-  transform: perspective(1000px) rotateY(120deg) translate(100px, -100px);
   opacity: 0;
   position: relative;
   z-index: 1;
+}
+
+.o-slider-subTitle {
+  font-size: 1.2rem;
+}
+
+.o-slider-paragraph {
   font-size: 0.8rem;
   max-width: 100%;
-  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -252,50 +198,50 @@
   }
 }
 
-// .o-slider-paragraph::after {
-//   content: "";
-//   bottom: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 0;
-//   z-index: -1;
-//   position: absolute;
-//   background: $black_60;
-//   box-shadow: 3px 3px 0 0 $black_10;
-//   transition: all 0.4s;
-//   opacity: 0;
-//   transform: skew(0, -10deg) translate(100px, 50px);
-// }
-//
-// .o-slider-title::after {
-//   content: "";
-//   bottom: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 0;
-//   z-index: -1;
-//   position: absolute;
-//   background: $black_60;
-//   box-shadow: 3px 3px 0 0 $black_10;
-//   transition: all 0.4s;
-//   opacity: 0;
-//   transform: skew(0, -10deg) translate(100px, 50px);
-// }
-//
-// .o-slider-subTitle::after {
-//   content: "";
-//   bottom: 0;
-//   left: 0;
-//   height: 100%;
-//   width: 0;
-//   z-index: -1;
-//   position: absolute;
-//   background: $black_60;
-//   box-shadow: 3px 3px 0 0 $black_10;
-//   transition: all 0.4s;
-//   opacity: 0;
-//   transform: skew(0, -10deg) translate(100px, 50px);
-// }
+.o-slider-paragraph::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  position: absolute;
+  background: $black_60;
+  box-shadow: 3px 3px 0 0 $black_10;
+  transition: all 0.4s;
+  opacity: 0;
+  transform: skew(0, -10deg) translate(100px, 50px);
+}
+
+.o-slider-title::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  position: absolute;
+  background: $black_60;
+  box-shadow: 3px 3px 0 0 $black_10;
+  transition: all 0.4s;
+  opacity: 0;
+  transform: skew(0, -10deg) translate(100px, 50px);
+}
+
+.o-slider-subTitle::after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  z-index: -1;
+  position: absolute;
+  background: $black_60;
+  box-shadow: 3px 3px 0 0 $black_10;
+  transition: all 0.4s;
+  opacity: 0;
+  transform: skew(0, -10deg) translate(100px, 50px);
+}
 
 .a-divider {
   display: block;

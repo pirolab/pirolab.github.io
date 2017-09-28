@@ -211,12 +211,15 @@
 
             if (number < 0) {
                 pbSlider.slider_Active = 0;
+                loader(false);
             } else if (number > pbSlider.slider_Count - 1) {
                 pbSlider.slider_Active = pbSlider.slider_Count - 1;
+                loader(false);
             } else {
                 pbSlider.slider_Active = number;
+                loader(true);
             }
-            loader(true);
+
             if (pbSlider.slider_Active >= pbSlider.slider_Count - 1) {
               var firstS = $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).first();
                 $(pbSlider.slider_Wrap + ' .o-slider-next').addClass('isDisabled');
@@ -247,15 +250,21 @@
             if(slider_Opts.slider_Dots.enabled === true){
               var sliderDots = $(pbSlider.slider_Wrap).find(pbSlider.slider_Dots.class + ' > *');
               var increase = 0;
-              for (increase; increase < sliderDots.length; increase++) {
-                  var className = increase == pbSlider.slider_Active ? 'isActive' : '';
-                  $(pbSlider.slider_Wrap).find(sliderDots[increase]).removeClass('isActive').addClass(className);
-                  $(pbSlider.slider_Wrap).find(sliderDots[increase]).children().removeClass('isActive').addClass(className);
-             }
-             setTimeout(function() {
-               $(pbSlider.slider_Wrap).find(sliderDots).children().removeClass('isActive');
+              if (number < 0 ) {
+                  loader(false);
+              } else if (number > pbSlider.slider_Count - 1) {
+                  loader(false);
+              } else {
+                for (increase; increase < sliderDots.length; increase++) {
+                    var className = increase == pbSlider.slider_Active ? 'isActive' : '';
+                    $(pbSlider.slider_Wrap).find(sliderDots[increase]).removeClass('isActive').addClass(className);
+                    $(pbSlider.slider_Wrap).find(sliderDots[increase]).children().removeClass('isActive').addClass(className);
+               }
+               setTimeout(function() {
+                 $(pbSlider.slider_Wrap).find(sliderDots).children().removeClass('isActive');
+               },500);
+              }
 
-             },500);
             }
             pbSlider.slider_Active = Number(pbSlider.slider_Active);
         };
