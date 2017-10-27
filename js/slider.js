@@ -92,9 +92,13 @@
 
         /*:::::::: ONlOAD STUFF ::::::::*/
         $(window).on('load', function() {
+
+            $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).append('<div class="a-sliderBg a-sliderBg--top"></div><div class="a-sliderBg a-sliderBg--middle"></div><div class="a-sliderBg a-sliderBg--middle2"></div><div class="a-sliderBg a-sliderBg--bottom"></div>');
           $(pbSlider.slider_Item).each(function(){
+
             var bg = $(this).attr('data-image');
-            $(this).css({'background-image':'url('+bg+')'});
+            //$(this).css({'background-image':'url('+bg+')'});
+            $(this).children('.a-sliderBg').css({'background-image':'url('+bg+')'});
           });
           setTimeout ( function(){
               loader(false);
@@ -102,6 +106,7 @@
             $(pbSlider.slider_Wrap + ' .o-slider-controls').addClass('isVisible');
             $(pbSlider.slider_Draggable).addClass('isVisible');
             setResponsive();
+
         });
 
         /*:::::::: INIT ::::::::*/
