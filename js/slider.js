@@ -94,6 +94,7 @@
         $(window).on('load', function() {
 
             $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).append('<div class="a-sliderBg a-sliderBg--top"></div><div class="a-sliderBg a-sliderBg--middle"></div><div class="a-sliderBg a-sliderBg--middle2"></div><div class="a-sliderBg a-sliderBg--bottom"></div>');
+            //$('.a-sliderBg').css({'background-size': '100% 400%';})
           $(pbSlider.slider_Item).each(function(){
 
             var bg = $(this).attr('data-image');

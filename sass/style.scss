@@ -85,13 +85,15 @@
     z-index: 100;
   }
 }
-
+// http://jsfiddle.net/soboaz/bzCNb/51/
 .a-sliderBg{
   position: absolute;
   top:0;
   left:0;
   height: 25%;
-  background-size: 100% 400%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   width: 100%;
   background-position:  0 0;
   transform: translateX(100%);
