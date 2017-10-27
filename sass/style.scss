@@ -58,8 +58,8 @@
   overflow: hidden;
   float: left;
   transition: all 0.2s cubic-bezier(0.7, 0.18, 0.53, 0.75);
-  opacity: 0.6;
-  transform: scale(.9,.9);
+  opacity: 0.9;
+  transform: scale(1,1);
   transform-origin: center center;
   z-index: 99;
   &::after{
