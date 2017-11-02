@@ -159,44 +159,36 @@ h1 {
   left: 0;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
+  width: 10.01%;
   transform: translateY(0);
   transition: all .8s;
   transition-delay: .4s; }
 
 .a-sliderBg:nth-child(1) {
-  width: 10%;
   left: 10%; }
 
 .a-sliderBg:nth-child(2) {
-  width: 10%;
   left: 20%; }
 
 .a-sliderBg:nth-child(3) {
-  width: 10%;
   left: 30%; }
 
 .a-sliderBg:nth-child(4) {
-  width: 10%;
   left: 40%; }
 
 .a-sliderBg:nth-child(5) {
-  width: 10%;
   left: 50%; }
 
 .a-sliderBg:nth-child(6) {
-  width: 10%;
   left: 60%; }
 
 .a-sliderBg:nth-child(7) {
-  width: 10%;
   left: 70%; }
 
 .a-sliderBg:nth-child(8) {
-  width: 10%;
   left: 80%; }
 
 .a-sliderBg:nth-child(9) {
-  width: 10%;
   left: 90%; }
 
 .o-slider--item.isActive .a-sliderBg {
