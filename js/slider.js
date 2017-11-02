@@ -93,14 +93,39 @@
         /*:::::::: ONlOAD STUFF ::::::::*/
         $(window).on('load', function() {
 
-            $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).append('<div class="a-sliderBg a-sliderBg--top"></div><div class="a-sliderBg a-sliderBg--middle"></div><div class="a-sliderBg a-sliderBg--middle2"></div><div class="a-sliderBg a-sliderBg--bottom"></div>');
+            $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).append('<div class="a-sliderBg__container"></div>');
+            var howMany = 10;
+            for( var i = 0; i < howMany; i++){
+              $(pbSlider.slider_Wrap).find('.a-sliderBg__container').append('<div class="a-sliderBg"></div>');
+
+            }
             //$('.a-sliderBg').css({'background-size': '100% 400%';})
+
           $(pbSlider.slider_Item).each(function(){
 
             var bg = $(this).attr('data-image');
-            //$(this).css({'background-image':'url('+bg+')'});
-            $(this).children('.a-sliderBg').css({'background-image':'url('+bg+')'});
+            $(this).css({'background-image':'url('+bg+')'});
+            //$(this).children('.a-sliderBg').css({'background-image':'url('+bg+')'});
           });
+
+          // $(pbSlider.slider_Item).find('.a-sliderBg').each(function(item){
+          //   var pbSliceH = $(this).width();
+          //   console.log(pbSliceH);
+          //
+          //   if($(this).is('.a-sliderBg--top')){
+          //     $(this).css('background-position', '0 0');
+          //   }
+          //   if($(this).is('.a-sliderBg--middle')){
+          //     $(this).css('background-position',  -pbSliceH +'px 0px');
+          //   }
+          //   if($(this).is('.a-sliderBg--middle2')){
+          //     $(this).css('background-position',  -(pbSliceH*2) +'px 0px');
+          //   }
+          //   if($(this).is('.a-sliderBg--bottom')){
+          //     $(this).css('background-position',  -(pbSliceH*3) +'px 0px');
+          //   }
+          // });
+
           setTimeout ( function(){
               loader(false);
             },1000);
