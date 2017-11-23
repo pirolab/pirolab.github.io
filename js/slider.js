@@ -190,19 +190,25 @@
                 cssProps: {userSelect: true}
               }
               var hammertime = new Hammer(stuff4hammer, hammerOpts);
+              hammertime.on('panstart', function(e) {
+                $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).addClass('isMoving');
+              });
               hammertime.on('pan', function(e) {
+
                 e.preventDefault();
+                $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).addClass('isMoving');
                 var percentage = 100 / pbSlider.slider_Count * e.deltaX / window.innerWidth;
                 var percentageCalc = percentage - 100 / pbSlider.slider_Count * pbSlider.slider_Active;
                 var notDraggable = $(e.target).find('.slider-textWrap').length;
                   if(pbSlider.slider_Active != pbSlider.slider_Count-1 && pbSlider.slider_Active != 0){
-                    $(pbSlider.slider_Wrap).find(pbSlider.slider_Item).addClass('isMoving');
+
                   }
                   $(pbSlider.slider_Draggable).css({
                       'perspective': '1000px',
                       'backface-visibility': 'hidden',
                       'transform': 'translateX( ' + percentageCalc + '% ) '
                   });
+                  //$(pbSlider.slider_Item).css({'background-position': + percentageCalc*2 + '% '});
                   if (e.isFinal) {
                       if (e.velocityX > 1) {
                           pbSlider.pbGoslide(pbSlider.slider_Active - 1);
